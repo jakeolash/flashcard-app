@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Flashcards</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="container">
+    <div class="card-area" id="cardArea">
+      </div>
+
+    <div class="controls-row navigation-row">
+      <span id="cardCounter">0 / 0</span>
+      <button id="prevBtn">⬅️ Prev</button>
+      <button id="nextBtn">Next ➡️</button>
+    </div>
+
+    <div class="controls-row">
+      <button id="markKnownBtn">✅ Mark Known</button>
+      <button id="starCardBtn">⭐ Star</button>
+    </div>
+
+    <div class="controls-row">
+      <button id="randomizeBtn">🔀 Shuffle</button>
+    </div>
+
+    <div class="controls-row">
+      <button id="toggleKnownBtn">🌟 Show Known Only</button>
+      <button id="toggleStarredBtn">🌟 Show Starred Only</button>
+    </div>
+
+    <div class="controls-row">
+      <input type="number" id="jumpInput" placeholder="Card #" min="1" />
+      <button id="jumpBtn">Go</button>
+    </div>
+  </div>
+
+  <script src="app.js"></script>
+</body>
+</html>
