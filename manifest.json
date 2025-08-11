@@ -1,18 +1,19 @@
 {
   "name": "Flashcard App",
   "short_name": "Flashcards",
-  "start_url": "./index.html",
+  "description": "An offline-capable Japanese flashcard app.",
+  "start_url": "./",
   "display": "standalone",
-  "background_color": "#ffffff",
-  "theme_color": "#4CAF50",
+  "background_color": "#0d1a2f",
+  "theme_color": "#1a418d",
   "icons": [
     {
-      "src": "icon-192.png",
+      "src": "icon-192x192.png",
       "sizes": "192x192",
       "type": "image/png"
     },
     {
-      "src": "icon-512.png",
+      "src": "icon-512x512.png",
       "sizes": "512x512",
       "type": "image/png"
     }
