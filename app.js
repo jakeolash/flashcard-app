@@ -99,6 +99,7 @@ const toggleStarredBtn = document.getElementById('toggleStarredBtn');
 const jumpInput = document.getElementById('jumpInput');
 const jumpBtn = document.getElementById('jumpBtn');
 const randomizeBtn = document.getElementById('randomizeBtn');
+const backToStartBtn = document.getElementById('backToStartBtn');
 
 // Helper function to save card data to local storage
 function saveCardsData() {
@@ -204,6 +205,7 @@ function setControlState(disabled) {
   nextBtn.disabled = disabled;
   jumpBtn.disabled = disabled;
   randomizeBtn.disabled = disabled;
+  backToStartBtn.disabled = disabled;
 }
 
 function updateCounter() {
@@ -263,20 +265,29 @@ starCardBtn.addEventListener('click', () => {
 });
 
 toggleKnownBtn.addEventListener('click', () => {
+  // New logic: toggle to show only unknown cards
   showKnownOnly = !showKnownOnly;
   showStarredOnly = false;
-  toggleKnownBtn.textContent = showKnownOnly ? '🌟 Show All Cards' : '🌟 Show Known Only';
+  toggleKnownBtn.textContent = showKnownOnly ? '✅ Show All Cards' : '✅ Show Unknown Only';
   toggleStarredBtn.textContent = '🌟 Show Starred Only';
   isRandomized = false;
   randomizeBtn.textContent = '🔀 Shuffle';
-  updateDeck();
+
+  // Update the deck to show only unknown cards
+  if (showKnownOnly) {
+    currentDeck = cardsData.filter(c => !c.known);
+  } else {
+    currentDeck = cardsData;
+  }
+  currentIndex = 0;
+  renderCard();
 });
 
 toggleStarredBtn.addEventListener('click', () => {
   showStarredOnly = !showStarredOnly;
   showKnownOnly = false;
   toggleStarredBtn.textContent = showStarredOnly ? '🌟 Show All Cards' : '🌟 Show Starred Only';
-  toggleKnownBtn.textContent = '🌟 Show Known Only';
+  toggleKnownBtn.textContent = '✅ Show Known Only';
   isRandomized = false;
   randomizeBtn.textContent = '🔀 Shuffle';
   updateDeck();
@@ -297,6 +308,12 @@ randomizeBtn.addEventListener('click', () => {
   isRandomized = !isRandomized;
   randomizeBtn.textContent = isRandomized ? '🔄 Unshuffle' : '🔀 Shuffle';
   updateDeck();
+});
+
+// New event listener for the Back to Start button
+backToStartBtn.addEventListener('click', () => {
+  currentIndex = 0;
+  renderCard();
 });
 
 // Initial load
