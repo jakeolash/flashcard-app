@@ -1,6 +1,6 @@
 {
-  "name": "Flashcard App",
-  "short_name": "Flashcards",
+  "name": "Japanese",
+  "short_name": "Japanese",
   "description": "An offline-capable Japanese flashcard app.",
   "start_url": "./",
   "display": "standalone",
