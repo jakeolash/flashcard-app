@@ -1,85 +1,84 @@
 // A list of Japanese words for your flashcard app.
 const initialCardsData = [
-  { word: "足 (ashi)", meaning: "foot, leg", known: false, starred: false },
-  { word: "頭 (atama)", meaning: "head", known: false, starred: false },
-  { word: "顔 (kao)", meaning: "face", known: false, starred: false },
-  { word: "口 (kuchi)", meaning: "mouth", known: false, starred: false },
-  { word: "歯 (ha)", meaning: "tooth", known: false, starred: false },
-  { word: "目 (me)", meaning: "eye", known: false, starred: false },
-  { word: "耳 (mimi)", meaning: "ear", known: false, starred: false },
-  { word: "手 (te)", meaning: "hand", known: false, starred: false },
-  { word: "指 (yubi)", meaning: "finger, toe", known: false, starred: false },
-  { word: "首 (kubi)", meaning: "neck", known: false, starred: false },
-  { word: "病気 (byōki)", meaning: "illness", known: false, starred: false },
-  { word: "家族 (kazoku)", meaning: "family", known: false, starred: false },
-  { word: "両親 (ryōshin)", meaning: "parents", known: false, starred: false },
-  { word: "子供 (kodomo)", meaning: "children, child", known: false, starred: false },
-  { word: "父 (chichi)", meaning: "father", known: false, starred: false },
-  { word: "母 (haha)", meaning: "mother", known: false, starred: false },
-  { word: "兄 (ani)", meaning: "older brother", known: false, starred: false },
-  { word: "姉 (ane)", meaning: "older sister", known: false, starred: false },
-  { word: "弟 (otōto)", meaning: "younger brother", known: false, starred: false },
-  { word: "妹 (imōto)", meaning: "younger sister", known: false, starred: false },
-  { word: "野菜 (yasai)", meaning: "vegetable", known: false, starred: false },
-  { word: "果物 (kudamono)", meaning: "fruit", known: false, starred: false },
-  { word: "飲み物 (nomimono)", meaning: "drink/beverage", known: false, starred: false },
-  { word: "水 (mizu)", meaning: "water", known: false, starred: false },
-  { word: "月曜日 (getsuyōbi)", meaning: "Monday", known: false, starred: false },
-  { word: "火曜日 (kayōbi)", meaning: "Tuesday", known: false, starred: false },
-  { word: "水曜日 (suiyōbi)", meaning: "Wednesday", known: false, starred: false },
-  { word: "木曜日 (mokuyōbi)", meaning: "Thursday", known: false, starred: false },
-  { word: "金曜日 (kinyōbi)", meaning: "Friday", known: false, starred: false },
-  { word: "日曜日 (nichiyōbi)", meaning: "Sunday", known: false, starred: false },
-  { word: "新聞 (shinbun)", meaning: "newspaper", known: false, starred: false },
-  { word: "音楽 (ongaku)", meaning: "music", known: false, starred: false },
-  { word: "学校 (gakkō)", meaning: "school", known: false, starred: false },
-  { word: "仕事 (shigoto)", meaning: "work", known: false, starred: false },
-  { word: "時間 (jikan)", meaning: "time", known: false, starred: false },
-  { word: "言葉 (kotoba)", meaning: "word, language", known: false, starred: false },
-  { word: "春 (haru)", meaning: "spring", known: false, starred: false },
-  { word: "夏 (natsu)", meaning: "summer", known: false, starred: false },
-  { word: "秋 (aki)", meaning: "autumn", known: false, starred: false },
-  { word: "冬 (fuyu)", meaning: "winter", known: false, starred: false },
-  { word: "雨 (ame)", meaning: "rain", known: false, starred: false },
-  { word: "雪 (yuki)", meaning: "snow", known: false, starred: false },
-  { word: "風 (kaze)", meaning: "wind", known: false, starred: false },
-  { word: "空 (sora)", meaning: "sky", known: false, starred: false },
-  { word: "海 (umi)", meaning: "sea, ocean", known: false, starred: false },
-  { word: "山 (yama)", meaning: "mountain", known: false, starred: false },
-  { word: "川 (kawa)", meaning: "river", known: false, starred: false },
-  { word: "町 (machi)", meaning: "town", known: false, starred: false },
-  { word: "家 (ie)", meaning: "house", known: false, starred: false },
-  { word: "駅 (eki)", meaning: "train station", known: false, starred: false },
-  { word: "道 (michi)", meaning: "road, street", known: false, starred: false },
-  { word: "電車 (densha)", meaning: "train", known: false, starred: false },
-  { word: "車 (kuruma)", known: false, starred: false },
-  { word: "本 (hon)", meaning: "book", known: false, starred: false },
-  { word: "紙 (kami)", meaning: "paper", known: false, starred: false },
-  { word: "手紙 (tegami)", meaning: "letter", known: false, starred: false },
-  { word: "辞書 (jisho)", meaning: "dictionary", known: false, starred: false },
-  { word: "部屋 (heya)", meaning: "room", known: false, starred: false },
-  { word: "机 (tsukue)", meaning: "desk", known: false, starred: false },
-  { word: "椅子 (isu)", meaning: "chair", known: false, starred: false },
-  { word: "テレビ (terebi)", meaning: "television", known: false, starred: false },
-  { word: "ラジオ (rajio)", meaning: "radio", known: false, starred: false },
-  { word: "映画 (eiga)", meaning: "movie", known: false, starred: false },
-  { word: "写真 (shashin)", meaning: "photograph", known: false, starred: false }
+    { word: "足", romaji: "ashi", meaning: "foot, leg", known: false, starred: false },
+    { word: "頭", romaji: "atama", meaning: "head", known: false, starred: false },
+    { word: "顔", romaji: "kao", meaning: "face", known: false, starred: false },
+    { word: "口", romaji: "kuchi", meaning: "mouth", known: false, starred: false },
+    { word: "歯", romaji: "ha", meaning: "tooth", known: false, starred: false },
+    { word: "目", romaji: "me", meaning: "eye", known: false, starred: false },
+    { word: "耳", romaji: "mimi", meaning: "ear", known: false, starred: false },
+    { word: "手", romaji: "te", meaning: "hand", known: false, starred: false },
+    { word: "指", romaji: "yubi", meaning: "finger, toe", known: false, starred: false },
+    { word: "首", romaji: "kubi", meaning: "neck", known: false, starred: false },
+    { word: "病気", romaji: "byōki", meaning: "illness", known: false, starred: false },
+    { word: "家族", romaji: "kazoku", meaning: "family", known: false, starred: false },
+    { word: "両親", romaji: "ryōshin", meaning: "parents", known: false, starred: false },
+    { word: "子供", romaji: "kodomo", meaning: "children, child", known: false, starred: false },
+    { word: "父", romaji: "chichi", meaning: "father", known: false, starred: false },
+    { word: "母", romaji: "haha", meaning: "mother", known: false, starred: false },
+    { word: "兄", romaji: "ani", meaning: "older brother", known: false, starred: false },
+    { word: "姉", romaji: "ane", meaning: "older sister", known: false, starred: false },
+    { word: "弟", romaji: "otōto", meaning: "younger brother", known: false, starred: false },
+    { word: "妹", romaji: "imōto", meaning: "younger sister", known: false, starred: false },
+    { word: "野菜", romaji: "yasai", meaning: "vegetable", known: false, starred: false },
+    { word: "果物", romaji: "kudamono", meaning: "fruit", known: false, starred: false },
+    { word: "飲み物", romaji: "nomimono", meaning: "drink/beverage", known: false, starred: false },
+    { word: "水", romaji: "mizu", meaning: "water", known: false, starred: false },
+    { word: "月曜日", romaji: "getsuyōbi", meaning: "Monday", known: false, starred: false },
+    { word: "火曜日", romaji: "kayōbi", meaning: "Tuesday", known: false, starred: false },
+    { word: "水曜日", romaji: "suiyōbi", meaning: "Wednesday", known: false, starred: false },
+    { word: "木曜日", romaji: "mokuyōbi", meaning: "Thursday", known: false, starred: false },
+    { word: "金曜日", romaji: "kinyōbi", meaning: "Friday", known: false, starred: false },
+    { word: "日曜日", romaji: "nichiyōbi", meaning: "Sunday", known: false, starred: false },
+    { word: "新聞", romaji: "shinbun", meaning: "newspaper", known: false, starred: false },
+    { word: "音楽", romaji: "ongaku", meaning: "music", known: false, starred: false },
+    { word: "学校", romaji: "gakkō", meaning: "school", known: false, starred: false },
+    { word: "仕事", romaji: "shigoto", meaning: "work", known: false, starred: false },
+    { word: "時間", romaji: "jikan", meaning: "time", known: false, starred: false },
+    { word: "言葉", romaji: "kotoba", meaning: "word, language", known: false, starred: false },
+    { word: "春", romaji: "haru", meaning: "spring", known: false, starred: false },
+    { word: "夏", romaji: "natsu", meaning: "summer", known: false, starred: false },
+    { word: "秋", romaji: "aki", meaning: "autumn", known: false, starred: false },
+    { word: "冬", romaji: "fuyu", meaning: "winter", known: false, starred: false },
+    { word: "雨", romaji: "ame", meaning: "rain", known: false, starred: false },
+    { word: "雪", romaji: "yuki", meaning: "snow", known: false, starred: false },
+    { word: "風", romaji: "kaze", meaning: "wind", known: false, starred: false },
+    { word: "空", romaji: "sora", meaning: "sky", known: false, starred: false },
+    { word: "海", romaji: "umi", meaning: "sea, ocean", known: false, starred: false },
+    { word: "山", romaji: "yama", meaning: "mountain", known: false, starred: false },
+    { word: "川", romaji: "kawa", meaning: "river", known: false, starred: false },
+    { word: "町", romaji: "machi", meaning: "town", known: false, starred: false },
+    { word: "家", romaji: "ie", meaning: "house", known: false, starred: false },
+    { word: "駅", romaji: "eki", meaning: "train station", known: false, starred: false },
+    { word: "道", romaji: "michi", meaning: "road, street", known: false, starred: false },
+    { word: "電車", romaji: "densha", meaning: "train", known: false, starred: false },
+    { word: "車", romaji: "kuruma", meaning: "car", known: false, starred: false },
+    { word: "本", romaji: "hon", meaning: "book", known: false, starred: false },
+    { word: "紙", romaji: "kami", meaning: "paper", known: false, starred: false },
+    { word: "手紙", romaji: "tegami", meaning: "letter", known: false, starred: false },
+    { word: "辞書", romaji: "jisho", meaning: "dictionary", known: false, starred: false },
+    { word: "部屋", romaji: "heya", meaning: "room", known: false, starred: false },
+    { word: "机", romaji: "tsukue", meaning: "desk", known: false, starred: false },
+    { word: "椅子", romaji: "isu", meaning: "chair", known: false, starred: false },
+    { word: "テレビ", romaji: "terebi", meaning: "television", known: false, starred: false },
+    { word: "ラジオ", romaji: "rajio", meaning: "radio", known: false, starred: false },
+    { word: "映画", romaji: "eiga", meaning: "movie", known: false, starred: false },
+    { word: "写真", romaji: "shashin", meaning: "photograph", known: false, starred: false }
 ];
 
 // Load from localStorage or use the initial data
 let cardsData;
 try {
-  const savedData = localStorage.getItem('flashcardApp_data');
-  if (savedData) {
-    cardsData = JSON.parse(savedData);
-  } else {
-    cardsData = initialCardsData;
-  }
+    const savedData = localStorage.getItem('flashcardApp_data');
+    if (savedData) {
+        cardsData = JSON.parse(savedData);
+    } else {
+        cardsData = initialCardsData;
+    }
 } catch (e) {
-  console.error("Failed to load data from localStorage", e);
-  cardsData = initialCardsData;
+    console.error("Failed to load data from localStorage", e);
+    cardsData = initialCardsData;
 }
-
 
 let currentIndex = 0;
 let showKnownOnly = false;
@@ -103,155 +102,153 @@ const backToStartBtn = document.getElementById('backToStartBtn');
 
 // Helper function to save card data to local storage
 function saveCardsData() {
-  try {
-    localStorage.setItem('flashcardApp_data', JSON.stringify(cardsData));
-  } catch (e) {
-    console.error("Failed to save data to localStorage", e);
-  }
+    try {
+        localStorage.setItem('flashcardApp_data', JSON.stringify(cardsData));
+    } catch (e) {
+        console.error("Failed to save data to localStorage", e);
+    }
 }
 
 // Fisher-Yates shuffle algorithm
 function shuffle(array) {
-  for (let i = array.length - 1; i > 0; i--) {
-    const j = Math.floor(Math.random() * (i + 1));
-    [array[i], array[j]] = [array[j], array[i]];
-  }
+    for (let i = array.length - 1; i > 0; i--) {
+        const j = Math.floor(Math.random() * (i + 1));
+        [array[i], array[j]] = [array[j], array[i]];
+    }
 }
 
 // Function to update the current deck based on filters
 function updateDeck() {
-  let newDeck;
-  if (showKnownOnly) {
-    newDeck = cardsData.filter(c => !c.known);
-  } else if (showStarredOnly) {
-    newDeck = cardsData.filter(c => c.starred);
-  } else {
-    newDeck = [...cardsData];
-  }
-  
-  if (isRandomized) {
-    shuffle(newDeck);
-  }
-  
-  currentDeck = newDeck;
-  currentIndex = 0;
-  renderCard();
+    let newDeck;
+    if (showKnownOnly) {
+        newDeck = cardsData.filter(c => !c.known);
+    } else if (showStarredOnly) {
+        newDeck = cardsData.filter(c => c.starred);
+    } else {
+        newDeck = [...cardsData];
+    }
+
+    if (isRandomized) {
+        shuffle(newDeck);
+    }
+
+    currentDeck = newDeck;
+    currentIndex = 0;
+    renderCard();
 }
 
 // Function to refresh the view without changing the deck or index
 function refreshCard() {
-  renderCard();
-  updateCounter();
+    renderCard();
+    updateCounter();
 }
 
 // Function to render the current card
 function renderCard() {
-  cardArea.innerHTML = '';
-  const cardData = currentDeck[currentIndex];
+    cardArea.innerHTML = '';
+    const cardData = currentDeck[currentIndex];
 
-  if (!cardData) {
-    cardCounter.textContent = `0 / 0`;
-    setControlState(true);
-    return;
-  } else {
-    setControlState(false);
-  }
+    if (!cardData) {
+        cardCounter.textContent = `0 / 0`;
+        setControlState(true);
+        return;
+    } else {
+        setControlState(false);
+    }
 
-  const card = document.createElement('div');
-  card.className = 'card';
-  if (cardData.known) card.classList.add('known');
-  if (cardData.starred) card.classList.add('starred');
+    const card = document.createElement('div');
+    card.className = 'card';
+    if (cardData.known) card.classList.add('known');
+    if (cardData.starred) card.classList.add('starred');
 
-  card.innerHTML = `
+    card.innerHTML = `
     <div class="card-content">
-      <div class="card-face front">${cardData.word}</div>
+      <div class="card-face front">${cardData.word} (${cardData.romaji})</div>
       <div class="card-face back">${cardData.meaning}</div>
     </div>
     ${cardData.known ? '<div class="known-indicator">✅</div>' : ''}
     ${cardData.starred ? '<div class="star-indicator">⭐</div>' : ''}
     <button class="volume-btn">🔊</button>
   `;
-  
-  cardArea.appendChild(card);
 
-  card.addEventListener('click', (e) => {
-    // Only flip the card if the click is not on the volume button
-    if (!e.target.classList.contains('volume-btn')) {
-      card.classList.toggle('flipped');
+    cardArea.appendChild(card);
+
+    card.addEventListener('click', (e) => {
+        // Only flip the card if the click is not on the volume button
+        if (!e.target.classList.contains('volume-btn')) {
+            card.classList.toggle('flipped');
+        }
+    });
+
+    const knownIndicator = card.querySelector('.known-indicator');
+    if (knownIndicator) {
+        knownIndicator.addEventListener('click', (e) => {
+            e.stopPropagation();
+            toggleKnown(cardData);
+        });
     }
-  });
 
-  const knownIndicator = card.querySelector('.known-indicator');
-  if (knownIndicator) {
-    knownIndicator.addEventListener('click', (e) => {
-      e.stopPropagation();
-      toggleKnown(cardData);
-    });
-  }
+    const starIndicator = card.querySelector('.star-indicator');
+    if (starIndicator) {
+        starIndicator.addEventListener('click', (e) => {
+            e.stopPropagation();
+            toggleStar(cardData);
+        });
+    }
 
-  const starIndicator = card.querySelector('.star-indicator');
-  if (starIndicator) {
-    starIndicator.addEventListener('click', (e) => {
-      e.stopPropagation();
-      toggleStar(cardData);
-    });
-  }
+    // Get the volume button and add a click event listener
+    const volumeBtn = card.querySelector('.volume-btn');
+    if (volumeBtn) {
+        volumeBtn.addEventListener('click', (e) => {
+            e.stopPropagation(); // Prevent the card from flipping
+            speakJapanese(cardData.word);
+        });
+    }
 
-  // Get the volume button and add a click event listener
-  const volumeBtn = card.querySelector('.volume-btn');
-  if (volumeBtn) {
-    volumeBtn.addEventListener('click', (e) => {
-      e.stopPropagation(); // Prevent the card from flipping
-      speakJapanese(cardData.word);
-    });
-  }
-
-  markKnownBtn.textContent = cardData.known ? '✅ Mark Unknown' : '✅ Mark Known';
-  starCardBtn.textContent = cardData.starred ? '⭐ Unstar' : '⭐ Star';
-  updateCounter();
+    markKnownBtn.textContent = cardData.known ? '✅ Mark Unknown' : '✅ Mark Known';
+    starCardBtn.textContent = cardData.starred ? '⭐ Unstar' : '⭐ Star';
+    updateCounter();
 }
 
 function setControlState(disabled) {
-  markKnownBtn.disabled = disabled;
-  starCardBtn.disabled = disabled;
-  prevBtn.disabled = disabled;
-  nextBtn.disabled = disabled;
-  jumpBtn.disabled = disabled;
-  randomizeBtn.disabled = disabled;
-  backToStartBtn.disabled = disabled;
+    markKnownBtn.disabled = disabled;
+    starCardBtn.disabled = disabled;
+    prevBtn.disabled = disabled;
+    nextBtn.disabled = disabled;
+    jumpBtn.disabled = disabled;
+    randomizeBtn.disabled = disabled;
+    backToStartBtn.disabled = disabled;
 }
 
 function updateCounter() {
-  const total = currentDeck.length;
-  const displayIndex = total === 0 ? 0 : currentIndex + 1;
-  cardCounter.textContent = `${displayIndex} / ${total}`;
-  
-  prevBtn.disabled = currentIndex === 0;
-  nextBtn.disabled = currentIndex >= total - 1;
+    const total = currentDeck.length;
+    const displayIndex = total === 0 ? 0 : currentIndex + 1;
+    cardCounter.textContent = `${displayIndex} / ${total}`;
+
+    prevBtn.disabled = currentIndex === 0;
+    nextBtn.disabled = currentIndex >= total - 1;
 }
 
 function toggleKnown(cardData) {
-  const originalCard = cardsData.find(c => c.word === cardData.word);
-  if (originalCard) {
-    originalCard.known = !originalCard.known;
-    saveCardsData(); // Save state after change
-    refreshCard();
-  }
+    const originalCard = cardsData.find(c => c.word === cardData.word);
+    if (originalCard) {
+        originalCard.known = !originalCard.known;
+        saveCardsData(); // Save state after change
+        refreshCard();
+    }
 }
 
 function toggleStar(cardData) {
-  const originalCard = cardsData.find(c => c.word === cardData.word);
-  if (originalCard) {
-    originalCard.starred = !originalCard.starred;
-    saveCardsData(); // Save state after change
-    refreshCard();
-  }
+    const originalCard = cardsData.find(c => c.word === cardData.word);
+    if (originalCard) {
+        originalCard.starred = !originalCard.starred;
+        saveCardsData(); // Save state after change
+        refreshCard();
+    }
 }
 
 let japaneseVoice = null;
 const getJapaneseVoice = () => {
-    if (japaneseVoice) return japaneseVoice;
-
     const voices = window.speechSynthesis.getVoices();
     for (const voice of voices) {
         if (voice.lang.startsWith('ja-')) {
@@ -262,21 +259,22 @@ const getJapaneseVoice = () => {
     return null;
 };
 
-// Event listener to ensure voices are loaded
 window.speechSynthesis.onvoiceschanged = () => {
-    getJapaneseVoice();
+    japaneseVoice = getJapaneseVoice();
 };
 
 function speakJapanese(text) {
-    const japaneseText = text.split(' ')[0];
-    const utterance = new SpeechSynthesisUtterance(japaneseText);
-    
-    // Attempt to find a Japanese voice explicitly
-    const voice = getJapaneseVoice();
-    if (voice) {
-        utterance.voice = voice;
+    const utterance = new SpeechSynthesisUtterance(text);
+
+    if (!japaneseVoice) {
+        console.warn("Japanese voice not yet loaded. Trying again or falling back.");
+        japaneseVoice = getJapaneseVoice(); // Try getting the voice again
+    }
+
+    if (japaneseVoice) {
+        utterance.voice = japaneseVoice;
+        utterance.lang = japaneseVoice.lang;
     } else {
-        // Fallback to the language code if no specific voice is found
         utterance.lang = 'ja-JP';
     }
 
@@ -286,81 +284,81 @@ function speakJapanese(text) {
 
 // Event listeners for controls
 prevBtn.addEventListener('click', () => {
-  if (currentIndex > 0) {
-    currentIndex--;
-    renderCard();
-  }
+    if (currentIndex > 0) {
+        currentIndex--;
+        renderCard();
+    }
 });
 
 nextBtn.addEventListener('click', () => {
-  if (currentIndex < currentDeck.length - 1) {
-    currentIndex++;
-    renderCard();
-  }
+    if (currentIndex < currentDeck.length - 1) {
+        currentIndex++;
+        renderCard();
+    }
 });
 
 markKnownBtn.addEventListener('click', () => {
-  const cardData = currentDeck[currentIndex];
-  if (cardData) {
-    toggleKnown(cardData);
-  }
+    const cardData = currentDeck[currentIndex];
+    if (cardData) {
+        toggleKnown(cardData);
+    }
 });
 
 starCardBtn.addEventListener('click', () => {
-  const cardData = currentDeck[currentIndex];
-  if (cardData) {
-    toggleStar(cardData);
-  }
+    const cardData = currentDeck[currentIndex];
+    if (cardData) {
+        toggleStar(cardData);
+    }
 });
 
 toggleKnownBtn.addEventListener('click', () => {
-  showKnownOnly = !showKnownOnly;
-  showStarredOnly = false;
-  toggleKnownBtn.textContent = showKnownOnly ? '✅ Show All Cards' : '✅ Show Unknown Only';
-  toggleStarredBtn.textContent = '🌟 Show Starred Only';
-  isRandomized = false;
-  randomizeBtn.textContent = '🔀 Shuffle';
+    showKnownOnly = !showKnownOnly;
+    showStarredOnly = false;
+    toggleKnownBtn.textContent = showKnownOnly ? '✅ Show All Cards' : '✅ Show Unknown Only';
+    toggleStarredBtn.textContent = '🌟 Show Starred Only';
+    isRandomized = false;
+    randomizeBtn.textContent = '🔀 Shuffle';
 
-  if (showKnownOnly) {
-    currentDeck = cardsData.filter(c => !c.known);
-  } else {
-    currentDeck = cardsData;
-  }
-  currentIndex = 0;
-  renderCard();
+    if (showKnownOnly) {
+        currentDeck = cardsData.filter(c => !c.known);
+    } else {
+        currentDeck = cardsData;
+    }
+    currentIndex = 0;
+    renderCard();
 });
 
 toggleStarredBtn.addEventListener('click', () => {
-  showStarredOnly = !showStarredOnly;
-  showKnownOnly = false;
-  toggleStarredBtn.textContent = showStarredOnly ? '🌟 Show All Cards' : '🌟 Show Starred Only';
-  toggleKnownBtn.textContent = '✅ Show Known Only';
-  isRandomized = false;
-  randomizeBtn.textContent = '🔀 Shuffle';
-  updateDeck();
+    showStarredOnly = !showStarredOnly;
+    showKnownOnly = false;
+    toggleStarredBtn.textContent = showStarredOnly ? '🌟 Show All Cards' : '🌟 Show Starred Only';
+    toggleKnownBtn.textContent = '✅ Show Known Only';
+    isRandomized = false;
+    randomizeBtn.textContent = '🔀 Shuffle';
+    updateDeck();
 });
 
 jumpBtn.addEventListener('click', () => {
-  const jumpToIndex = parseInt(jumpInput.value, 10) - 1;
-  if (!isNaN(jumpToIndex) && jumpToIndex >= 0 && jumpToIndex < currentDeck.length) {
-    currentIndex = jumpToIndex;
-    renderCard();
-  } else {
-    alert(`Please enter a number between 1 and ${currentDeck.length}.`);
-  }
-  jumpInput.value = '';
+    const jumpToIndex = parseInt(jumpInput.value, 10) - 1;
+    if (!isNaN(jumpToIndex) && jumpToIndex >= 0 && jumpToIndex < currentDeck.length) {
+        currentIndex = jumpToIndex;
+        renderCard();
+    } else {
+        alert(`Please enter a number between 1 and ${currentDeck.length}.`);
+    }
+    jumpInput.value = '';
 });
 
 randomizeBtn.addEventListener('click', () => {
-  isRandomized = !isRandomized;
-  randomizeBtn.textContent = isRandomized ? '🔄 Unshuffle' : '🔀 Shuffle';
-  updateDeck();
+    isRandomized = !isRandomized;
+    randomizeBtn.textContent = isRandomized ? '🔄 Unshuffle' : '🔀 Shuffle';
+    updateDeck();
 });
 
 // New event listener for the Back to Start button
 backToStartBtn.addEventListener('click', () => {
-  currentIndex = 0;
-  renderCard();
+    currentIndex = 0;
+    renderCard();
 });
 
 // Initial load
