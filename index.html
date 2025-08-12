@@ -5,55 +5,50 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Japanese Flashcards</title>
     <link rel="stylesheet" href="style.css">
-    <link rel="manifest" href="/manifest.json">
-    <link rel="icon" href="/favicon.ico" type="image/x-icon">
-    <script>
-        if ('serviceWorker' in navigator) {
-            window.addEventListener('load', () => {
-                navigator.serviceWorker.register('/service-worker.js')
-                    .then(registration => {
-                        console.log('Service Worker registered:', registration);
-                    })
-                    .catch(error => {
-                        console.log('Service Worker registration failed:', error);
-                    });
-            });
-        }
-    </script>
 </head>
 <body>
+
     <header>
         <h1>Japanese Flashcards</h1>
     </header>
 
     <main class="container">
+        
         <div id="cardArea">
             </div>
-        <div class="controls">
-            <span id="cardCounter" class="card-counter">0 / 0</span>
-            <div class="control-buttons">
-                <button id="prevBtn">← Previous</button>
-                <button id="nextBtn">Next →</button>
+
+        <div class="card-counter-container">
+            <span id="cardCounter" class="card-counter"></span>
+        </div>
+
+        <div id="controls" class="controls">
+            <div class="row">
+                <button id="prevBtn">Previous</button>
+                <button id="nextBtn">Next</button>
             </div>
-            <div class="filters">
-                <button id="toggleKnownBtn">✅ Show Unknown Only</button>
-                <button id="toggleStarredBtn">🌟 Show Starred Only</button>
+            <div class="row">
+                <button id="markKnownBtn">✅ Mark Known</button>
+                <button id="starCardBtn">⭐ Star</button>
             </div>
-            <div class="bottom-controls">
-                <div class="misc-controls">
-                    <button id="markKnownBtn">✅ Mark Known</button>
-                    <button id="starCardBtn">⭐ Star</button>
-                    <button id="randomizeBtn">🔀 Shuffle</button>
-                    <button id="backToStartBtn">⏪ Back to Start</button>
-                </div>
-                <div class="jump-controls">
-                    <input type="number" id="jumpInput" placeholder="Card #">
-                    <button id="jumpBtn">Jump</button>
+            <div class="row">
+                <button id="toggleKnownBtn">Show Unknown Only</button>
+                <button id="toggleStarredBtn">Show Starred Only</button>
+            </div>
+            <div class="row">
+                <button id="backToStartBtn">↩️ Back to Start</button>
+                <button id="randomizeBtn">🔀 Shuffle</button>
+            </div>
+            <div class="row">
+                <div id="jump" class="jump-controls">
+                    <input type="number" id="jumpInput" placeholder="#">
+                    <button id="jumpBtn">Go</button>
                 </div>
             </div>
         </div>
+
     </main>
-    
+
     <script src="app.js"></script>
+
 </body>
 </html>

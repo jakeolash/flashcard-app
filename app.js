@@ -80,6 +80,7 @@ try {
     cardsData = initialCardsData;
 }
 
+
 let currentIndex = 0;
 let showKnownOnly = false;
 let showStarredOnly = false;
@@ -127,11 +128,11 @@ function updateDeck() {
     } else {
         newDeck = [...cardsData];
     }
-
+    
     if (isRandomized) {
         shuffle(newDeck);
     }
-
+    
     currentDeck = newDeck;
     currentIndex = 0;
     renderCard();
@@ -162,15 +163,15 @@ function renderCard() {
     if (cardData.starred) card.classList.add('starred');
 
     card.innerHTML = `
-    <div class="card-content">
-      <div class="card-face front">${cardData.word} (${cardData.romaji})</div>
-      <div class="card-face back">${cardData.meaning}</div>
-    </div>
-    ${cardData.known ? '<div class="known-indicator">✅</div>' : ''}
-    ${cardData.starred ? '<div class="star-indicator">⭐</div>' : ''}
-    <button class="volume-btn">🔊</button>
-  `;
-
+        <div class="card-content">
+            <div class="card-face front">${cardData.word} (${cardData.romaji})</div>
+            <div class="card-face back">${cardData.meaning}</div>
+        </div>
+        ${cardData.known ? '<div class="known-indicator">✅</div>' : ''}
+        ${cardData.starred ? '<div class="star-indicator">⭐</div>' : ''}
+        <button class="volume-btn">🔊</button>
+    `;
+    
     cardArea.appendChild(card);
 
     card.addEventListener('click', (e) => {
@@ -224,7 +225,7 @@ function updateCounter() {
     const total = currentDeck.length;
     const displayIndex = total === 0 ? 0 : currentIndex + 1;
     cardCounter.textContent = `${displayIndex} / ${total}`;
-
+    
     prevBtn.disabled = currentIndex === 0;
     nextBtn.disabled = currentIndex >= total - 1;
 }
@@ -247,37 +248,9 @@ function toggleStar(cardData) {
     }
 }
 
-let japaneseVoice = null;
-const getJapaneseVoice = () => {
-    const voices = window.speechSynthesis.getVoices();
-    for (const voice of voices) {
-        if (voice.lang.startsWith('ja-')) {
-            japaneseVoice = voice;
-            return japaneseVoice;
-        }
-    }
-    return null;
-};
-
-window.speechSynthesis.onvoiceschanged = () => {
-    japaneseVoice = getJapaneseVoice();
-};
-
 function speakJapanese(text) {
     const utterance = new SpeechSynthesisUtterance(text);
-
-    if (!japaneseVoice) {
-        console.warn("Japanese voice not yet loaded. Trying again or falling back.");
-        japaneseVoice = getJapaneseVoice(); // Try getting the voice again
-    }
-
-    if (japaneseVoice) {
-        utterance.voice = japaneseVoice;
-        utterance.lang = japaneseVoice.lang;
-    } else {
-        utterance.lang = 'ja-JP';
-    }
-
+    utterance.lang = 'ja-JP';
     speechSynthesis.speak(utterance);
 }
 

@@ -1,7 +1,7 @@
 body {
     font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
-    background-color: #f0f2f5;
-    color: #333;
+    background-color: #0A0B2C;
+    color: #fff;
     margin: 0;
     padding: 0;
     display: flex;
@@ -13,9 +13,9 @@ body {
 
 header {
     width: 100%;
-    background-color: #fff;
+    background-color: #0A0B2C;
     padding: 15px 20px;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    box-shadow: none;
     text-align: center;
     position: sticky;
     top: 0;
@@ -25,7 +25,7 @@ header {
 h1 {
     margin: 0;
     font-size: 24px;
-    color: #007BFF;
+    color: #fff;
 }
 
 .container {
@@ -53,7 +53,7 @@ h1 {
     transform-style: preserve-3d;
     transition: transform 0.6s;
     cursor: pointer;
-    background-color: #fff;
+    background-color: #303854;
     border-radius: 12px;
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
     display: flex;
@@ -85,22 +85,25 @@ h1 {
     box-sizing: border-box;
     font-size: 28px;
     line-height: 1.4;
+    color: #fff;
 }
 
 .card-face.back {
     transform: rotateY(180deg);
     font-size: 20px;
-    color: #666;
+    color: #fff;
 }
 
 .known-indicator,
-.star-indicator {
+.star-indicator,
+.volume-btn {
     position: absolute;
     top: 10px;
-    font-size: 24px;
+    z-index: 10;
     cursor: pointer;
     user-select: none;
     transition: transform 0.2s;
+    font-size: 24px;
 }
 
 .known-indicator {
@@ -121,20 +124,35 @@ h1 {
 .controls {
     width: 100%;
     text-align: center;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.row {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+}
+
+/* New CSS for the card counter container */
+.card-counter-container {
+    width: 100%;
+    max-width: 600px;
+    padding: 0 20px;
+    text-align: left; /* Aligns the counter to the left */
+    margin-bottom: 10px;
 }
 
 .card-counter {
-    display: block;
+    display: inline-block; /* Changed from block to align better */
     font-size: 16px;
-    color: #666;
-    margin-bottom: 15px;
+    color: #fff;
 }
 
-.control-buttons button,
-.filters button,
-.bottom-controls button,
-.jump-controls button {
-    background-color: #007BFF;
+button {
+    background-color: #303854;
     color: white;
     border: none;
     padding: 10px 20px;
@@ -142,44 +160,21 @@ h1 {
     font-size: 16px;
     cursor: pointer;
     transition: background-color 0.2s;
-    margin: 5px;
 }
 
-.control-buttons button:hover,
-.filters button:hover,
-.bottom-controls button:hover,
-.jump-controls button:hover {
-    background-color: #0056b3;
+button:hover {
+    background-color: #424e6a;
 }
 
-.control-buttons button:disabled,
-.filters button:disabled,
-.bottom-controls button:disabled,
-.jump-controls button:disabled {
-    background-color: #ccc;
+button:disabled {
+    background-color: #5d6786;
     cursor: not-allowed;
-}
-
-.filters {
-    margin: 10px 0;
-}
-
-.bottom-controls {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    align-items: center;
-    margin-top: 15px;
-}
-
-.misc-controls button {
-    margin: 5px;
 }
 
 .jump-controls {
     display: flex;
     align-items: center;
-    margin: 5px;
+    gap: 5px;
 }
 
 #jumpInput {
@@ -188,11 +183,11 @@ h1 {
     border-radius: 8px;
     border: 1px solid #ccc;
     text-align: center;
+    background-color: #303854;
+    color: #fff;
 }
 
-/* New CSS for the volume button */
 .volume-btn {
-    position: absolute;
     bottom: 5px;
     right: 5px;
     background: none;
@@ -211,5 +206,8 @@ h1 {
     }
     .card-face.back {
         font-size: 18px;
+    }
+    .row {
+        flex-wrap: wrap;
     }
 }
