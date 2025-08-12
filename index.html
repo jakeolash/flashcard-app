@@ -1,65 +1,59 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Flashcards</title>
-  <link rel="stylesheet" href="style.css" />
-  <link rel="manifest" href="/manifest.json" />
-  <script>
-  if ('serviceWorker' in navigator) {
-    window.addEventListener('load', () => {
-      // First, unregister any existing service workers
-      navigator.serviceWorker.getRegistrations().then(registrations => {
-        for(let registration of registrations) {
-          registration.unregister();
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Japanese Flashcards</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="manifest" href="/manifest.json">
+    <link rel="icon" href="/favicon.ico" type="image/x-icon">
+    <script>
+        if ('serviceWorker' in navigator) {
+            window.addEventListener('load', () => {
+                navigator.serviceWorker.register('/service-worker.js')
+                    .then(registration => {
+                        console.log('Service Worker registered:', registration);
+                    })
+                    .catch(error => {
+                        console.log('Service Worker registration failed:', error);
+                    });
+            });
         }
-      });
-
-      // Then, register the new service worker
-      navigator.serviceWorker.register('/service-worker.js')
-        .then(registration => {
-          console.log('Service Worker registered:', registration);
-        })
-        .catch(error => {
-          console.log('Service Worker registration failed:', error);
-        });
-    });
-  }
-</script>
+    </script>
 </head>
 <body>
-  <div class="container">
-    <div class="card-area" id="cardArea">
-      </div>
+    <header>
+        <h1>Japanese Flashcards</h1>
+    </header>
 
-    <div class="controls-row navigation-row">
-      <span id="cardCounter">0 / 0</span>
-      <button id="prevBtn">⬅️ Prev</button>
-      <button id="nextBtn">Next ➡️</button>
-    </div>
-
-    <div class="controls-row">
-      <button id="markKnownBtn">✅ Mark Known</button>
-      <button id="starCardBtn">⭐ Star</button>
-    </div>
-
-    <div class="controls-row">
-      <button id="randomizeBtn">🔀 Shuffle</button>
-      <button id="backToStartBtn">🔙 Back to Start</button>
-    </div>
-
-    <div class="controls-row">
-      <button id="toggleKnownBtn">🌟 Show Known Only</button>
-      <button id="toggleStarredBtn">🌟 Show Starred Only</button>
-    </div>
-
-    <div class="controls-row">
-      <input type="number" id="jumpInput" placeholder="Card #" min="1" />
-      <button id="jumpBtn">Go</button>
-    </div>
-  </div>
-
-  <script src="app.js"></script>
+    <main class="container">
+        <div id="cardArea">
+            </div>
+        <div class="controls">
+            <span id="cardCounter" class="card-counter">0 / 0</span>
+            <div class="control-buttons">
+                <button id="prevBtn">← Previous</button>
+                <button id="nextBtn">Next →</button>
+            </div>
+            <div class="filters">
+                <button id="toggleKnownBtn">✅ Show Unknown Only</button>
+                <button id="toggleStarredBtn">🌟 Show Starred Only</button>
+            </div>
+            <div class="bottom-controls">
+                <div class="misc-controls">
+                    <button id="markKnownBtn">✅ Mark Known</button>
+                    <button id="starCardBtn">⭐ Star</button>
+                    <button id="randomizeBtn">🔀 Shuffle</button>
+                    <button id="backToStartBtn">⏪ Back to Start</button>
+                </div>
+                <div class="jump-controls">
+                    <input type="number" id="jumpInput" placeholder="Card #">
+                    <button id="jumpBtn">Jump</button>
+                </div>
+            </div>
+        </div>
+    </main>
+    
+    <script src="app.js"></script>
 </body>
 </html>
