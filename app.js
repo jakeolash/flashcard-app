@@ -52,7 +52,7 @@ const initialCardsData = [
   { word: "駅 (eki)", meaning: "train station", known: false, starred: false },
   { word: "道 (michi)", meaning: "road, street", known: false, starred: false },
   { word: "電車 (densha)", meaning: "train", known: false, starred: false },
-  { word: "車 (kuruma)", meaning: "car", known: false, starred: false },
+  { word: "車 (kuruma)", known: false, starred: false },
   { word: "本 (hon)", meaning: "book", known: false, starred: false },
   { word: "紙 (kami)", meaning: "paper", known: false, starred: false },
   { word: "手紙 (tegami)", meaning: "letter", known: false, starred: false },
@@ -248,14 +248,41 @@ function toggleStar(cardData) {
   }
 }
 
-// Function to speak the Japanese text using the Web Speech API
+let japaneseVoice = null;
+const getJapaneseVoice = () => {
+    if (japaneseVoice) return japaneseVoice;
+
+    const voices = window.speechSynthesis.getVoices();
+    for (const voice of voices) {
+        if (voice.lang.startsWith('ja-')) {
+            japaneseVoice = voice;
+            return japaneseVoice;
+        }
+    }
+    return null;
+};
+
+// Event listener to ensure voices are loaded
+window.speechSynthesis.onvoiceschanged = () => {
+    getJapaneseVoice();
+};
+
 function speakJapanese(text) {
-  // This extracts only the first word (the Japanese part) from the string.
-  const japaneseText = text.split(' ')[0];
-  const utterance = new SpeechSynthesisUtterance(japaneseText);
-  utterance.lang = 'ja-JP'; // Set the language to Japanese
-  speechSynthesis.speak(utterance);
+    const japaneseText = text.split(' ')[0];
+    const utterance = new SpeechSynthesisUtterance(japaneseText);
+    
+    // Attempt to find a Japanese voice explicitly
+    const voice = getJapaneseVoice();
+    if (voice) {
+        utterance.voice = voice;
+    } else {
+        // Fallback to the language code if no specific voice is found
+        utterance.lang = 'ja-JP';
+    }
+
+    speechSynthesis.speak(utterance);
 }
+
 
 // Event listeners for controls
 prevBtn.addEventListener('click', () => {
